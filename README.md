@@ -138,6 +138,8 @@ Use `{% sw_extends %}` inside that file to extend the original block.
 
 ```
 ShopwareDesignSystem/
+├── .gitignore
+├── .github/workflows/ci.yml              # GitHub Actions: composer validate + PHP lint
 ├── composer.json
 ├── LICENSE
 ├── README.md
@@ -169,7 +171,11 @@ ShopwareDesignSystem/
             ├── buttons.html.twig              # Button variants, sizes, states
             ├── inputs.html.twig               # Form controls & validation
             ├── checkboxes.html.twig           # Checkboxes, radios, switches
-            └── messages.html.twig             # Bootstrap alert / flash messages
+            ├── messages.html.twig             # Bootstrap alert / flash messages
+            ├── badges.html.twig               # Badge variants, pill, counter, status
+            ├── cards.html.twig                # Card variants, product tiles, panels
+            ├── tables.html.twig               # Table modifiers, responsive, contextual rows
+            └── pagination.html.twig           # Pagination sizes, ellipsis, alignment
 ```
 
 ## Bootstrap components covered
@@ -183,6 +189,10 @@ ShopwareDesignSystem/
 | **Inputs** | `form-control`, `form-select`, `form-label`, `form-text`, `input-group`, `form-floating`, `is-valid`, `is-invalid`, `valid-feedback`, `invalid-feedback` |
 | **Checkboxes** | `form-check`, `form-check-input`, `form-check-label`, `form-check-inline`, `form-switch` |
 | **Alerts** | `alert`, `alert-{variant}`, `alert-dismissible`, `alert-heading`, `alert-link` |
+| **Badges** | `badge`, `text-bg-{variant}`, `rounded-pill`, `position-absolute` counter badges |
+| **Cards** | `card`, `card-header`, `card-body`, `card-footer`, `card-title`, `card-text`, `border-{variant}` |
+| **Tables** | `table`, `table-striped`, `table-hover`, `table-bordered`, `table-sm`, `table-dark`, `table-light`, `table-responsive`, contextual row classes |
+| **Pagination** | `pagination`, `page-item`, `page-link`, `pagination-sm/lg`, `justify-content-center/end` |
 
 ## Development
 
