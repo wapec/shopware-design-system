@@ -1,0 +1,32 @@
+{
+    "name": "shopware-community/design-system-plugin",
+    "description": "A generic open-source Shopware 6 Design System plugin that showcases Bootstrap components available in the Storefront",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shopware Community",
+            "homepage": "https://github.com/shopware-community/design-system-plugin"
+        }
+    ],
+    "require": {
+        "shopware/core": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "Swds\\DesignSystem\\ShopwareDesignSystem",
+        "label": {
+            "de-DE": "Shopware Design System",
+            "en-GB": "Shopware Design System"
+        },
+        "description": {
+            "de-DE": "Generisches Design-System-Plugin zum Präsentieren von Bootstrap-Komponenten im Shopware Storefront",
+            "en-GB": "Generic design system plugin for showcasing Bootstrap components in the Shopware Storefront"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Swds\\DesignSystem\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{% block design_system_colors %}
+<h2 class="mb-3">Colors</h2>
+<p class="text-muted mb-4">Bootstrap contextual color utilities available via <code>bg-*</code> and <code>text-*</code> classes.</p>
+
+{% set swatches = [
+    { name: 'primary',   bg: 'bg-primary',   text: 'text-white' },
+    { name: 'secondary', bg: 'bg-secondary', text: 'text-white' },
+    { name: 'success',   bg: 'bg-success',   text: 'text-white' },
+    { name: 'danger',    bg: 'bg-danger',     text: 'text-white' },
+    { name: 'warning',   bg: 'bg-warning',    text: 'text-dark'  },
+    { name: 'info',      bg: 'bg-info',       text: 'text-dark'  },
+    { name: 'light',     bg: 'bg-light',      text: 'text-dark'  },
+    { name: 'dark',      bg: 'bg-dark',       text: 'text-white' },
+] %}
+
+<h5 class="mb-2">Theme Colors</h5>
+<div class="design-system-swatch-row">
+    {% for swatch in swatches %}
+        <div class="design-system-swatch {{ swatch.bg }}">
+            <span class="{{ swatch.text }}">{{ swatch.name }}</span>
+        </div>
+    {% endfor %}
+</div>
+
+<h5 class="mb-2 mt-4">Subtle Background Colors (Bootstrap 5.3+)</h5>
+<div class="design-system-swatch-row">
+    {% for color in ['primary', 'secondary', 'success', 'danger', 'warning', 'info'] %}
+        <div class="design-system-swatch bg-{{ color }}-subtle border-{{ color }}-subtle">
+            <span>{{ color }}-subtle</span>
+        </div>
+    {% endfor %}
+</div>
+
+<h5 class="mb-2 mt-4">Text Colors</h5>
+<div class="d-flex flex-wrap gap-3 mt-2">
+    {% for color in ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'muted'] %}
+        <span class="text-{{ color }}">text-{{ color }}</span>
+    {% endfor %}
+</div>
+{% endblock %}

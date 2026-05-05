@@ -1,0 +1,39 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_content %}
+<div class="design-system-page container-xxl">
+    <h1 class="mb-4 mt-4">Shopware Design System</h1>
+    <p class="lead mb-5">
+        A reference page showcasing Bootstrap components available in the Shopware 6 Storefront.
+        Use this page to verify your theme customisations and to explore available UI primitives.
+    </p>
+
+    <div class="design-system-section">
+        {% sw_include "@ShopwareDesignSystem/storefront/page/design-system/colors.html.twig" %}
+    </div>
+
+    <div class="design-system-section">
+        {% sw_include "@ShopwareDesignSystem/storefront/page/design-system/typography.html.twig" %}
+    </div>
+
+    <div class="design-system-section">
+        {% sw_include "@ShopwareDesignSystem/storefront/page/design-system/icons.html.twig" %}
+    </div>
+
+    <div class="design-system-section">
+        {% sw_include "@ShopwareDesignSystem/storefront/page/design-system/buttons.html.twig" %}
+    </div>
+
+    <div class="design-system-section">
+        {% sw_include "@ShopwareDesignSystem/storefront/page/design-system/inputs.html.twig" %}
+    </div>
+
+    <div class="design-system-section">
+        {% sw_include "@ShopwareDesignSystem/storefront/page/design-system/checkboxes.html.twig" %}
+    </div>
+
+    <div class="design-system-section">
+        {% sw_include "@ShopwareDesignSystem/storefront/page/design-system/messages.html.twig" %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% block design_system_messages %}
+<h2 class="mb-3">Messages &amp; Alerts</h2>
+<p class="text-muted mb-4">Bootstrap alert components as used for flash messages in the Shopware Storefront.</p>
+
+<h5 class="mb-2">Standard alerts</h5>
+{% for type in ['info', 'success', 'warning', 'danger'] %}
+    <div role="alert" class="alert alert-{{ type }} d-flex align-items-center gap-2 mb-2">
+        <div class="flex-shrink-0">
+            {% if type == 'info' %}
+                {% sw_icon 'info' style { pack: 'default' } %}
+            {% elseif type == 'success' %}
+                {% sw_icon 'checkmark-circle' style { pack: 'default' } %}
+            {% elseif type == 'warning' %}
+                {% sw_icon 'warning' style { pack: 'default' } %}
+            {% else %}
+                {% sw_icon 'blocked' style { pack: 'default' } %}
+            {% endif %}
+        </div>
+        <div>
+            {% if type == 'info' %}Your shopping cart is empty.{% endif %}
+            {% if type == 'success' %}1 product has been added to the shopping cart.{% endif %}
+            {% if type == 'warning' %}No products found for the applied filters.{% endif %}
+            {% if type == 'danger' %}The provided credentials do not match any account.{% endif %}
+        </div>
+    </div>
+{% endfor %}
+
+<h5 class="mb-2 mt-4">Dismissible alerts</h5>
+{% for type in ['info', 'success', 'warning', 'danger'] %}
+    <div role="alert" class="alert alert-{{ type }} alert-dismissible d-flex align-items-center gap-2 mb-2 fade show">
+        <div class="flex-shrink-0">
+            {% if type == 'info' %}
+                {% sw_icon 'info' style { pack: 'default' } %}
+            {% elseif type == 'success' %}
+                {% sw_icon 'checkmark-circle' style { pack: 'default' } %}
+            {% elseif type == 'warning' %}
+                {% sw_icon 'warning' style { pack: 'default' } %}
+            {% else %}
+                {% sw_icon 'blocked' style { pack: 'default' } %}
+            {% endif %}
+        </div>
+        <div class="flex-grow-1">
+            Dismissible {{ type }} alert message.
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+
+<h5 class="mb-2 mt-4">Alerts with heading and link</h5>
+<div role="alert" class="alert alert-info">
+    <h4 class="alert-heading">
+        {% sw_icon 'info' style { pack: 'default' } %}
+        Heads up!
+    </h4>
+    <p>This component uses the <code>alert-heading</code> class on the heading and the <code>alert-link</code> class on any link inside the alert.</p>
+    <hr>
+    <p class="mb-0">Need help? <a href="#" class="alert-link">Visit our help center</a>.</p>
+</div>
+
+<div role="alert" class="alert alert-success">
+    <h4 class="alert-heading">
+        {% sw_icon 'checkmark-circle' style { pack: 'default' } %}
+        Order placed successfully!
+    </h4>
+    <p>Your order <strong>#10042</strong> has been confirmed. You will receive a confirmation email shortly.</p>
+    <hr>
+    <p class="mb-0"><a href="#" class="alert-link">View order details</a></p>
+</div>
+{% endblock %}

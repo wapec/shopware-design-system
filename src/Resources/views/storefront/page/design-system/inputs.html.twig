@@ -1,0 +1,154 @@
+{% block design_system_inputs %}
+<h2 class="mb-3">Inputs &amp; Form Controls</h2>
+<p class="text-muted mb-4">Bootstrap form elements as used throughout the Shopware Storefront.</p>
+
+<div class="row g-4">
+
+    {# Text inputs #}
+    <div class="col-md-6">
+        <h5 class="mb-3">Text inputs</h5>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-text">Text input</label>
+            <input type="text" class="form-control" id="ds-text" placeholder="Enter text…">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-email">Email address</label>
+            <input type="email" class="form-control" id="ds-email" placeholder="name@example.com" autocomplete="email">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-password">Password</label>
+            <input type="password" class="form-control" id="ds-password" placeholder="Min. 8 characters"
+                   minlength="8" autocomplete="new-password">
+            <div class="form-text">Passwords must be at least 8 characters long.</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-textarea">Textarea</label>
+            <textarea class="form-control" id="ds-textarea" rows="3" placeholder="Enter a longer message…"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-disabled">Disabled input</label>
+            <input type="text" class="form-control" id="ds-disabled" placeholder="Not editable" disabled>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-readonly">Read-only input</label>
+            <input type="text" class="form-control" id="ds-readonly" value="Read-only value" readonly>
+        </div>
+    </div>
+
+    {# Selects #}
+    <div class="col-md-6">
+        <h5 class="mb-3">Selects</h5>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-select">Default select</label>
+            <select class="form-select" id="ds-select" aria-label="Sorting">
+                <option selected>Choose an option…</option>
+                <option value="name-asc">Name A–Z</option>
+                <option value="name-desc">Name Z–A</option>
+                <option value="price-asc">Price ascending</option>
+                <option value="price-desc">Price descending</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-select-salutation">Salutation</label>
+            <select class="form-select" id="ds-select-salutation" name="salutationId" required>
+                <option value="" disabled selected>Select salutation…</option>
+                <option value="not-specified">Not specified</option>
+                <option value="mrs">Mrs.</option>
+                <option value="mr">Mr.</option>
+                <option value="diverse">Diverse</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-select-size">Select with size</label>
+            <select class="form-select" size="3" id="ds-select-size" aria-label="size 3 select">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-input-group">Input group</label>
+            <div class="input-group">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="ds-input-group" placeholder="Username">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ds-search">Search with button</label>
+            <div class="input-group">
+                <input type="search" class="form-control" id="ds-search" placeholder="Search products…">
+                <button class="btn btn-primary" type="button">
+                    {% sw_icon 'search' style { pack: 'default' } %}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    {# Validation states #}
+    <div class="col-12">
+        <h5 class="mb-3">Validation states</h5>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label" for="ds-valid">Valid input</label>
+                <input type="text" class="form-control is-valid" id="ds-valid" value="john@example.com">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label" for="ds-invalid">Invalid input</label>
+                <input type="text" class="form-control is-invalid" id="ds-invalid" value="">
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label" for="ds-invalid-select">Invalid select</label>
+                <select class="form-select is-invalid" id="ds-invalid-select" required>
+                    <option value="" disabled selected>Please choose…</option>
+                    <option>Option A</option>
+                </select>
+                <div class="invalid-feedback">Please select an option.</div>
+            </div>
+        </div>
+    </div>
+
+    {# Floating labels #}
+    <div class="col-12">
+        <h5 class="mb-3">Floating labels</h5>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="ds-float-city" placeholder="City">
+                    <label for="ds-float-city">City</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="ds-float-email" placeholder="name@example.com">
+                    <label for="ds-float-email">Email address</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating">
+                    <select class="form-select" id="ds-float-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                    </select>
+                    <label for="ds-float-select">Select country</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

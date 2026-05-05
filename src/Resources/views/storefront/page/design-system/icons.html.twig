@@ -1,0 +1,50 @@
+{% block design_system_icons %}
+<h2 class="mb-3">Icons</h2>
+<p class="text-muted mb-4">
+    Shopware ships with a built-in SVG icon library. Use the <code>{% raw %}{% sw_icon 'name' %}{% endraw %}</code>
+    Twig tag to render icons. Available icon packs: <code>default</code> (solid) and <code>multicolor</code>.
+</p>
+
+<h5 class="mb-2">Icon sizes</h5>
+<div class="d-flex align-items-center gap-4 mb-4">
+    <div class="text-center">
+        {% sw_icon 'star' style { pack: 'default', width: '16px', height: '16px' } %}
+        <div><code>16px</code></div>
+    </div>
+    <div class="text-center">
+        {% sw_icon 'star' style { pack: 'default', width: '24px', height: '24px' } %}
+        <div><code>24px</code></div>
+    </div>
+    <div class="text-center">
+        {% sw_icon 'star' style { pack: 'default', width: '32px', height: '32px' } %}
+        <div><code>32px</code></div>
+    </div>
+    <div class="text-center">
+        {% sw_icon 'star' style { pack: 'default', width: '48px', height: '48px' } %}
+        <div><code>48px</code></div>
+    </div>
+</div>
+
+<h5 class="mb-2">Common icons (default pack)</h5>
+<div class="design-system-icon-grid">
+    {% set icons = [
+        'arrow-left', 'arrow-right', 'bag', 'bar-chart', 'bell',
+        'blocked', 'calendar', 'cart', 'checkmark', 'checkmark-circle',
+        'chevron-down', 'chevron-left', 'chevron-right', 'chevron-up',
+        'circle-minus', 'circle-plus', 'close', 'cog', 'copy',
+        'credit-card', 'download', 'envelope', 'eye', 'eye-slash',
+        'filter', 'heart', 'heart-filled', 'home', 'info',
+        'lightbulb', 'lock', 'logout', 'minus', 'paper-plane',
+        'pencil', 'pin', 'plus', 'profile', 'question-circle',
+        'resize', 'rotate', 'search', 'share', 'shopping-bag',
+        'star', 'tag', 'trash', 'upload', 'user',
+        'warning', 'world',
+    ] %}
+    {% for icon in icons %}
+        <div class="design-system-icon-item">
+            {% sw_icon icon style { pack: 'default' } %}
+            <span>{{ icon }}</span>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

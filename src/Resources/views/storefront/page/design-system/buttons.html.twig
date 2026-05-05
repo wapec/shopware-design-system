@@ -1,0 +1,108 @@
+{% block design_system_buttons %}
+<h2 class="mb-3">Buttons</h2>
+<p class="text-muted mb-4">Standard Bootstrap button variants, sizes, states and icon combinations.</p>
+
+<h5 class="mb-2">Solid variants</h5>
+<div class="design-system-btn-row">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-link">Link</button>
+</div>
+
+<h5 class="mb-2 mt-4">Outline variants</h5>
+<div class="design-system-btn-row">
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-light">Light</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+</div>
+
+<h5 class="mb-2 mt-4">Sizes</h5>
+<div class="design-system-btn-row align-items-center">
+    <button type="button" class="btn btn-primary btn-lg">Large</button>
+    <button type="button" class="btn btn-primary">Default</button>
+    <button type="button" class="btn btn-primary btn-sm">Small</button>
+</div>
+<div class="design-system-btn-row align-items-center mt-2">
+    <button type="button" class="btn btn-outline-secondary btn-lg">Large</button>
+    <button type="button" class="btn btn-outline-secondary">Default</button>
+    <button type="button" class="btn btn-outline-secondary btn-sm">Small</button>
+</div>
+
+<h5 class="mb-2 mt-4">Disabled state</h5>
+<div class="design-system-btn-row">
+    <button type="button" class="btn btn-primary" disabled>Primary</button>
+    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+    <button type="button" class="btn btn-outline-primary" disabled>Outline Primary</button>
+    <button type="button" class="btn btn-outline-secondary" disabled>Outline Secondary</button>
+    <button type="button" class="btn btn-link" disabled>Link</button>
+</div>
+
+<h5 class="mb-2 mt-4">Loading / busy state</h5>
+<div class="design-system-btn-row">
+    <button type="button" class="btn btn-primary" disabled>
+        <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+        Loading…
+    </button>
+    <button type="button" class="btn btn-outline-secondary" disabled>
+        <span class="spinner-grow spinner-grow-sm me-1" role="status" aria-hidden="true"></span>
+        Processing…
+    </button>
+</div>
+
+<h5 class="mb-2 mt-4">Buttons with icons</h5>
+<div class="design-system-btn-row">
+    <button type="button" class="btn btn-primary d-inline-flex align-items-center gap-2">
+        {% sw_icon 'cart' style { pack: 'default' } %}
+        Add to cart
+    </button>
+    <button type="button" class="btn btn-success d-inline-flex align-items-center gap-2">
+        {% sw_icon 'checkmark' style { pack: 'default' } %}
+        Confirm
+    </button>
+    <button type="button" class="btn btn-danger d-inline-flex align-items-center gap-2">
+        {% sw_icon 'trash' style { pack: 'default' } %}
+        Delete
+    </button>
+    <button type="button" class="btn btn-outline-secondary d-inline-flex align-items-center gap-2">
+        {% sw_icon 'pencil' style { pack: 'default' } %}
+        Edit
+    </button>
+    <button type="button" class="btn btn-outline-secondary d-inline-flex align-items-center gap-2">
+        Search
+        {% sw_icon 'search' style { pack: 'default' } %}
+    </button>
+</div>
+
+<h5 class="mb-2 mt-4">Icon-only buttons</h5>
+<div class="design-system-btn-row align-items-center">
+    <button type="button" class="btn btn-primary" aria-label="Add to cart">
+        {% sw_icon 'cart' style { pack: 'default' } %}
+    </button>
+    <button type="button" class="btn btn-outline-secondary" aria-label="Search">
+        {% sw_icon 'search' style { pack: 'default' } %}
+    </button>
+    <button type="button" class="btn btn-outline-danger" aria-label="Delete">
+        {% sw_icon 'trash' style { pack: 'default' } %}
+    </button>
+    <button type="button" class="btn btn-link" aria-label="Bookmark">
+        {% sw_icon 'heart' style { pack: 'default' } %}
+    </button>
+</div>
+
+<h5 class="mb-2 mt-4">Block / full-width button</h5>
+<div class="d-grid gap-2 col-md-6">
+    <button type="button" class="btn btn-primary">Full-width primary</button>
+    <button type="button" class="btn btn-outline-secondary">Full-width outline</button>
+</div>
+{% endblock %}
