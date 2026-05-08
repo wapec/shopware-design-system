@@ -1,13 +1,12 @@
 {
     "name": "shopware-community/design-system-plugin",
     "description": "A generic open-source Shopware 6 Design System plugin that showcases Bootstrap components available in the Storefront",
-    "version": "1.0.0",
     "type": "shopware-platform-plugin",
     "license": "MIT",
     "authors": [
         {
-            "name": "Shopware Community",
-            "homepage": "https://github.com/shopware-community/design-system-plugin"
+            "name": "Bohdan Baranov",
+            "homepage": "https://github.com/wapec"
         }
     ],
     "require": {
